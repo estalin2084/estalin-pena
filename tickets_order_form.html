@@ -1,0 +1,182 @@
+	<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Event Tickets Order Form</title>
+		<link rel="stylesheet" type="text/css" href="styles/normalize.css">
+		<link rel="stylesheet" type="text/css" href="styles/main.css">		
+	</head>
+
+	<body>
+		<div id="frame">
+			<header>
+				<img src="images/ornament-logo.png" alt="New Year Central Logo" style="width: 400px;">
+				<div id="header-line-1">New Year Central</div>
+				<div id="header-line-2">For the child in all of us!</div>
+			</header>
+
+			<!-- navigation starts -->
+			<nav id="nav_menu">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="about_us.html">About Us</a></li>
+					<li><a href="products.html">Our Products</a></li>
+					<li><a href="tickets_order_form.html" class="current">Event Tickets</a></li>
+					<li><a href="contact_us.html">Contact Us</a></li>
+				</ul>
+			</nav>
+
+			<aside>
+				<div class="sidebar-title">Products of The Week...</div>
+				<ul>
+					<li><a href="assets/products/berry-garland.html">Natural Holly Berry Garland, 5f - $74.99</a></li>
+					<li><a href="assets/products/artificial-red-berry-garland.html">Artificial Red Berry and White Edge Holly Leaf Christmas Garland, 5.5f - $38.99</a></li>
+					<li><a href="assets/products/christmas-berries-stems.html">Christmas Berries Red Stems Evergreen Pine Branches, 8pcs - $15.99</a></li>
+				</ul>
+			</aside>
+			
+			<main>
+				<h1>Order Event Tickets</h1>
+				<!-- The form starts here... -->
+				<form name="order_form" method="post" action="place_order.html">
+					<fieldset>
+					<legend>Member Information</legend>
+					<div class="form-item">
+					<label for="email">Email:</label>
+					<input type="email" name="email" id="email" required placeholder="Email" autofocus/></div>
+					<div class="form-item">
+					<label for="first_name">First Name:</label>
+					<input type="text" name="first_name" id="first_name" required placeholder="First Name"/></div>
+					<div class="form-item">
+					<label for="last_name">Last Name:</label>
+					<input type="text" name="last_name" id="last_name" required placeholder="Last Name"/></div>	
+					<div class="form-item">
+					<label for="phone_number">Phone Number:</label>
+					<input type="text" name="phone_number" id="phone_number" required pattern="\d{3}-\d{3}-\d{4}"  placeholder="999-999-9999" title="Please enter a phone number in the format of 999-999-9999" /></div>
+					<div class="form-item">
+					<label for="address">Address:</label>
+					<input type="text" name="address" id="address" required placeholder="Address" /></div>
+					<div class="form-item">
+					<label for="city">City:</label>
+					<input type="text" name="city" id="city" required placeholder="City" /></div>
+					<div class="form-item">
+					<label for="province">Province:</label>
+					<input type="text" name="province" id="province" required pattern="[A-Z]{2}" placeholder="Province" title="Please enter a 2-letter province code" /></div>
+					<div class="form-item">
+					<label for="postal_code">Postal Code:</label>
+					<input type="text" name="postal_code" id="postal_code" required pattern="[A-Za-z0-9]{6}" placeholder="Postal Code" title="Please enter a 6-character postal code" /></div>
+
+					  <!-- Add other personal information fields here -->
+					</fieldset>
+
+					<fieldset>
+					  <!-- Add event select control and other event details fields here -->
+					<legend>Ordering Information</legend>
+					<div class="form-item">
+					<label for="event">Event:</label>
+					<select name="event" id="event">
+					<option>Cookie Decoration Contest</option>
+					<option>Tree Decoration Contest</option>
+					<option>Gift of Light Ride-Along</option>
+					<option>Breakfast with Santa</option>
+					</select>
+					</div>
+					
+					<div class="form-item">
+					<label for="order_type">Order Type:</label>
+					<select name="order_type" id="order_type">
+					  <option>Member Package</option>
+					  <option>Donor Package</option>
+					  <option>Single Tickets</option>
+					</select>
+					</div>
+					
+					<div class="form-item">
+					<label for="number_of_tickets">Number of Tickets:</label>
+					<input type="number" name="number_of_tickets" id="number_of_tickets" required placeholder="Number of Tickets" />
+					</div>
+					</fieldset>
+						<fieldset>
+						<!-- Add payment information fields here -->
+						<legend>Payment Information</legend>
+						<div class="form-item">
+						<label for="card_type">Card Type:</label>
+						<select name="card_type" id="card_type">
+							<option>Visa</option>
+							<option>Master Card</option>
+							<option>Discover</option>
+						</select>
+						</div>
+						<div class="form-item">
+					  <label for="card_number">Card Number:</label>
+					  <input type="text" name="card_number" id="card_number" required pattern="\d{16}" placeholder="Card Number" title="Please enter a 16-digit card number" />
+					  </div>
+					  <div class="form-item">
+					  <label for="expiration_date">Expiration Date:</label>
+					  <select name="month" id="month">
+						<option>January</option>
+						<option>February</option>
+						<option>March</option>
+						<option>April</option>
+						<option>May</option>
+						<option>June</option>
+						<option>July</option>
+						<option>August</option>
+						<option>September</option>
+						<option>October</option>
+						<option>November</option>
+						<option>December</option>
+						</div>
+					  </select>
+					  <select name="year" id="year">
+						<option>2021</option>
+						<option>2022</option>
+						<option>2023</option>
+						<option>2024</option>
+						<option>2025</option>
+						<option>2026</option>
+						<option>2027</option>
+					  </select>
+						</div>
+					</fieldset>
+					<fieldset id="payment_method">
+					  <legend>Payment Method</legend>
+						<input type="radio" name="payment_method" value="pay_by_credit" required />Bill Me
+					  <label for="bill_me">
+					  </label>
+						<input type="radio" name="payment_method" value="pay_by_check" required />Pay by Credit Card 
+					  <label for="pay_by_credit_card">
+						
+					  </label>
+					</fieldset>
+					<fieldset>
+					  <legend>Billing Information</legend>
+					  <div class="form-item">
+					  <label for="city">City:</label>
+					  <input type="text" name="city" id="city" required placeholder="City" /></div>
+					  <div class="form-item">
+					  <label for="province">Province:</label>
+					  <input type="text" name="province" id="province" required pattern="[A-Z]{2}" placeholder="Province" title="Please enter a 2-letter province code" /></div>
+					  <div class="form-item">
+					  <label for="postal_code">Postal Code:</label>
+					  <input type="text" name="postal_code" id="postal_code" required pattern="[A-Za-z0-9]{6}" placeholder="Postal Code" title="Please enter a 6-character postal code" /></div>
+					</fieldset>
+					
+					</fieldset>
+					<fieldset>
+					<legend>Submit Your Order</legend>
+					<div class="Submit-buttons">
+					<input type="submit" value="Submit Order" />
+					<input type="reset" value="Reset Fields" />
+					</div>
+					</fieldset>
+				  </form>
+				
+			</main>
+			
+			<footer>
+				<p>&copy; 2023 New Year Central. Created by Estalin Peña.</p>
+			</footer>
+		</div>
+	</body>
+</html>
