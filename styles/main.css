@@ -222,6 +222,12 @@ fieldset {
 	
   }
 
+  form fieldset input#radio {
+    margin-left: 80px;
+    width: auto;
+	text-align: right;
+	}
+
   /* Month & Year */
   #month {
 	width: 7em;
@@ -230,17 +236,18 @@ fieldset {
 	width: 5em;
   }
   
-  /* Submit & Reset Button */
-  input[type="button"] {
-	width: 10em;
-	font-size: 90%;
-	
-  }
 
   .Submit-buttons{
 
-	padding-left: 10%;
-	padding-right: 10%;
+	text-align: center;
+	
+  }
+
+  .Submit-buttons button{
+
+	width: 10em;
+	margin: 0 10px;
+	
   }
 /* Footer */
 footer {

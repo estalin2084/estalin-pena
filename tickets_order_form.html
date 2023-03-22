@@ -141,11 +141,12 @@
 					</fieldset>
 					<fieldset id="payment_method">
 					  <legend>Payment Method</legend>
-						<input type="radio" name="payment_method" value="pay_by_credit" required />Bill Me
-					  <label for="bill_me">
+
+					<input id="radio" type="radio" name="payment_method" value="pay_by_credit" required />Bill Me
+					  <label  id="radio" for="bill_me">
 					  </label>
-						<input type="radio" name="payment_method" value="pay_by_check" required />Pay by Credit Card 
-					  <label for="pay_by_credit_card">
+						<input  id="radio" type="radio" name="payment_method" value="pay_by_check" required />Pay by Credit Card 
+					  <label  id="radio" for="pay_by_credit_card">
 						
 					  </label>
 					</fieldset>
@@ -166,8 +167,8 @@
 					<fieldset>
 					<legend>Submit Your Order</legend>
 					<div class="Submit-buttons">
-					<input type="submit" value="Submit Order" />
-					<input type="reset" value="Reset Fields" />
+					<button type="button" value="Submit Order">Submit</button>
+					<button type="button" value="Reset Fields">Reset Fields</button>
 					</div>
 					</fieldset>
 				  </form>
